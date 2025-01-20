@@ -1,0 +1,32 @@
+/* Quicksand and Raleway Font Import */
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Reset Styles */
+html{
+    font-size: 62.5%;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global Color */
+:root{
+    --color-white: #F7F7F7;
+    --color-sky-blue:#01ACFD;
+    --color-orange:#FEA301;
+    --color-black:#000000;
+    --color-202020:#202020;
+    --color-808080:#808080;
+}
+
+/* Base Styles */
+body{
+    font-family: "Quicksand", serif;
+    color: var(--color-black);
+}
+
+/* Global Styles */
