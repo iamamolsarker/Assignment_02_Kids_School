@@ -458,6 +458,10 @@ Tab and Mobile Both media Queries
         border-radius: 10000px;
         background-color: var(--color-dark-black);
     }
+    .logo-text{
+        display: none;
+    }
+
 
     /* Curriculum */
     .std-curiclum-title, .story-title{
