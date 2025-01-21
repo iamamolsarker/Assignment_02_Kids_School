@@ -117,7 +117,7 @@ nav{
     color: var(--color-dark-black);
     font-size: clamp(2.4rem, 2.5vw, 3.2rem);
 }
-.menu-container .menu-item{
+.menu-container .menu-item, .footer-menu .menu-item{
     list-style: none;
 }
 .menu-container .menu-item::after{
@@ -373,6 +373,47 @@ nav{
     margin-bottom: 2.5rem;
 }
 
+/* Footer styles */
+footer{
+    background-color: var(--color-sky-blue);
+    padding: 12rem 0;
+}
+.footer-logo-container{
+    flex: 1 1 50%;
+}
+.footer-menu-container, .footer-social-container{
+    flex: 1 1 25%;
+}
+.footer-logo-text{
+    color: var(--color-white);
+    font-size: clamp(3.6rem, 2.5vw, 4.2rem);
+    line-height: 1;
+}
+.footer-text{
+    color: var(--color-white);
+    font-size: clamp(1.6rem, 2.5vw, 2rem);
+    font-weight: 400;
+    line-height: 1.4;
+    margin-top: 3.5rem;
+    max-width: 400px;
+}
+.footer-sub-title{
+    color: var(--color-white);
+    font-size: clamp(2rem, 2.5vw, 2.6rem);
+    font-weight: 700;
+    margin-bottom: 3.2rem;
+}
+.footer-menu .menu-item a{
+    color: var(--color-white);
+    font-weight: 500;
+}
+
+/* Marquee Styles */
+.marquee-text{
+    color: var(--color-white);
+    font-size: 4rem;
+}
+
 
 /********************************* 
 Tab and Mobile Both media Queries
@@ -452,7 +493,7 @@ Tab and Mobile Both media Queries
         padding: 20px 30px;
     }
     /* Hero Section */
-    #hero-section,#std-curriculum-section, #our-stories{
+    #hero-section,#std-curriculum-section, #our-stories, footer{
         padding: 30px;
     }
 }
@@ -464,7 +505,7 @@ Tab and Mobile Both media Queries
     }
 
     /* Hero Section */
-    #hero-section, #std-curriculum-section, #our-stories{
+    #hero-section, #std-curriculum-section, #our-stories, footer{
         padding: 40px 20px;
     }
 
