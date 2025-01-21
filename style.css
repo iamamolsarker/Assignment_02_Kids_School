@@ -176,9 +176,78 @@ nav{
     width: 100%;
 }
 
-/* Tab and Mobile Both media Queries*/
+/* Standard Curriculum Styles */
+#std-curriculum-section{
+    padding: 60px 0;
+    background-image: url(images/bg.png);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.std-curiclum-title{
+    color: var(--color-black);
+    font-size: clamp(2.8rem, 3vw, 4.6rem);
+    margin-bottom: 8rem;
+}
+.curriculum-box-container{
+    margin-bottom: 8rem;
+}
+.curriculum-box-container .box{
+    padding: 5rem 4rem;
+    background-color: var(--color-white);
+    border-radius: 20px;
+    box-shadow: 0 0 25px #00000014;
+}
+.curriculum-box-container .box .box-img{
+    height: 140px;
+    object-fit: contain;
+}
+.curriculum-box-container .box .box-title{
+    margin: 3rem 0;
+    font-size: clamp(1.8rem, 2vw, 2.4rem);
+}
+.curriculum-box-container .box .box-text{
+    font-family: "Raleway", serif;
+    color: var(--color-808080);
+    font-size: clamp(1.4rem, 1vw, 1.6rem);
+    font-weight: 500;
+    line-height: 1.6;
+    margin-bottom: 3rem;
+}
+.box-1{
+    background-image: linear-gradient(#DEF5FF 0%, #ffffff 50%);
+    border: 1px solid #DEF5FF;
+}
+.box-2{
+    background-image: linear-gradient(#FFF4DC 0%, #ffffff 50%);
+    border: 1px solid #FFF4DC;
+}
+.box-3{
+    background-image: linear-gradient(#F2E8FF 0%, #ffffff 50%);
+    border: 1px solid #F2E8FF;
+}
+.read-more-btn{
+    font-size: clamp(1.4rem, 1vw, 1.6rem);
+    font-weight: 700;
+}
+.box-1 .read-more-btn{
+    color: #64C8FF;
+}
+.box-2 .read-more-btn{
+    color: #F0AA00;
+}
+.box-3 .read-more-btn{
+    color: #8700FF;
+}
+
+/********************************* 
+Tab and Mobile Both media Queries
+**********************************/
 @media screen and (max-width:1024px){
     /* global styles */
+    .flex-col-tm{
+        flex-direction: column;
+    }
     .flex-col-reversed-tm{
         flex-direction: column-reverse;
     }
@@ -209,8 +278,19 @@ nav{
         background-color: var(--color-dark-black);
     }
 
-    /* Hero section */
-    
+    /* Curriculum */
+    .std-curiclum-title{
+        margin-bottom: 2.5rem;
+    }
+    .curriculum-box-container{
+        margin-bottom: 3rem;
+    }
+    .curriculum-box-container .box .box-title{
+        margin: 2rem 0;
+    }
+    .curriculum-box-container .box .box-text{
+        margin-bottom: 2rem;
+    }
 }
 
 /* Tablet Media Queries */
@@ -219,7 +299,7 @@ nav{
         padding: 20px 30px;
     }
     /* Hero Section */
-    #hero-section{
+    #hero-section,#std-curriculum-section{
         padding: 30px;
     }
 }
@@ -231,7 +311,7 @@ nav{
     }
 
     /* Hero Section */
-    #hero-section{
-        padding: 20px;
+    #hero-section, #std-curriculum-section{
+        padding: 40px 20px;
     }
 }
