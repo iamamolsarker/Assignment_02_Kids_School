@@ -32,6 +32,7 @@ a{
 body{
     font-family: "Quicksand", serif;
     color: var(--color-black);
+    background-color: var(--color-F7F7F7);
     font-size: 1.6rem;
     font-weight: 400;
 }
@@ -177,14 +178,14 @@ nav{
 }
 
 /* Standard Curriculum Styles */
-#std-curriculum-section{
+#std-curriculum-section, #our-stories{
     padding: 60px 0;
     background-image: url(images/bg.png);
     background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
 }
-.std-curiclum-title{
+.std-curiclum-title, .story-title{
     color: var(--color-black);
     font-size: clamp(2.8rem, 3vw, 4.6rem);
     margin-bottom: 8rem;
@@ -206,7 +207,7 @@ nav{
     margin: 3rem 0;
     font-size: clamp(1.8rem, 2vw, 2.4rem);
 }
-.curriculum-box-container .box .box-text{
+.curriculum-box-container .box .box-text, .card-text{
     font-family: "Raleway", serif;
     color: var(--color-808080);
     font-size: clamp(1.4rem, 1vw, 1.6rem);
@@ -250,6 +251,82 @@ nav{
     color:var(--color-white);
 }
 
+/* Our Stories Styles */
+.our-stories-grid-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 2rem;
+    grid-template-areas:
+    "box-1 box-1 box-2 box-3"
+    "box-1 box-1 box-4 box-5";
+}
+.grid-box-1{
+    grid-area: box-1;
+}
+.grid-box-2{
+    grid-area: box-2;
+}
+.grid-box-3{
+    grid-area: box-3;
+}
+.grid-box-4{
+    grid-area: box-4;
+}
+.grid-box-5{
+    grid-area: box-5;
+}
+.grid-box{
+    background-color: var(--color-white);
+    border-radius: 16px;
+}
+.card-container img{
+    width: 100%;
+    border-radius: 16px 16px 0 0;
+}
+.card-text-container{
+    padding: 0 3.5rem 3.5rem;
+    margin-top: -2.7rem;
+}
+.card-text-container span{
+    display: inline-block;
+    color: var(--color-white);
+    font-size: clamp(1.4rem, 1vw, 1.6rem);
+    font-weight: 500;
+    padding: 1.5rem 3rem;
+    border-radius: 5rem;
+    margin-bottom: 2.5rem;
+}
+.grid-box-1 .card-text-container span{
+    background-color: var(--color-sky-blue);
+}
+.grid-box-2 .card-text-container span{
+    background-color: var(--color-orange);
+}
+.grid-box-3 .card-text-container span{
+    background-color: #95B226;
+}
+.grid-box-4 .card-text-container span{
+    background-color: #8700FF;
+}
+.grid-box-5 .card-text-container span{
+    background-color: #3CD8E8;
+}
+.grid-box .card-title{
+    color: var(--color-black);
+    font-size: clamp(1.5rem, 1.5vw, 1.8rem);
+    font-weight: 700;
+    line-height: 1.5;
+}
+.grid-box-1 .card-title{
+    color: var(--color-black);
+    font-size: clamp(1.5rem, 2.5vw, 2.8rem);
+    font-weight: 700;
+    line-height: 1.5;
+    margin-bottom: 2.5rem;
+}
+
+
 /********************************* 
 Tab and Mobile Both media Queries
 **********************************/
@@ -289,7 +366,7 @@ Tab and Mobile Both media Queries
     }
 
     /* Curriculum */
-    .std-curiclum-title{
+    .std-curiclum-title, .story-title{
         margin-bottom: 2.5rem;
     }
     .curriculum-box-container{
@@ -304,6 +381,19 @@ Tab and Mobile Both media Queries
     .navigation-container{
         display: none;
     }
+
+    /* Grid box style */
+
+    .our-stories-grid-container{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas:
+    "box-2 box-3"
+    "box-4 box-5";
+    }
+    .grid-box-1{
+        display: none;
+    }
 }
 
 /* Tablet Media Queries */
@@ -312,7 +402,7 @@ Tab and Mobile Both media Queries
         padding: 20px 30px;
     }
     /* Hero Section */
-    #hero-section,#std-curriculum-section{
+    #hero-section,#std-curriculum-section, #our-stories{
         padding: 30px;
     }
 }
@@ -324,7 +414,20 @@ Tab and Mobile Both media Queries
     }
 
     /* Hero Section */
-    #hero-section, #std-curriculum-section{
+    #hero-section, #std-curriculum-section, #our-stories{
         padding: 40px 20px;
+    }
+
+    /* Grid styles */
+    .card-text-container{
+        padding: 0 1.5rem 2.5rem;
+        margin-top: -2.1rem;
+    }
+    .card-text-container span{
+        font-size: clamp(1.2rem, 1vw, 1.6rem);
+        font-weight: 500;
+        padding: 1rem 2rem;
+        border-radius: 5rem;
+        margin-bottom: 2.5rem;
     }
 }
