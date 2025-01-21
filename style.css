@@ -90,6 +90,9 @@ body{
 }
 
 /* Navbar Styles */
+.hamburger-container{
+    display: none;
+}
 nav{
     padding: 2rem 0;
 }
@@ -98,7 +101,7 @@ nav{
 }
 .logo-container .logo-text{
     color: var(--color-dark-black);
-    font-size: clamp(2rem, 2.5vw, 3.2rem);
+    font-size: clamp(2.4rem, 2.5vw, 3.2rem);
 }
 .menu-container .menu-item{
     list-style: none;
@@ -148,4 +151,40 @@ nav{
 .nav-btn{
     background-color: var(--color-orange);
     border: 1px solid var(--color-orange);
+}
+
+/* Tab and Mobile Both media Queries*/
+@media screen and (max-width:1024px){
+    .menu-container{
+        display: none;
+    }
+    .nav-btn-container{
+        display: none;
+    }
+    .hamburger-container{
+        display: block;
+    }
+    .hamburger{
+        gap: 5px;
+    }
+    .hamburger span{
+        display: inline-block;
+        width: 25px;
+        height: 3px;
+        background-color: var(--color-dark-black);
+    }
+}
+
+/* Tablet Media Queries */
+@media screen and (min-width:768px) and (max-width:1024px){
+    body{
+        padding: 0 30px;
+    }
+}
+
+/* Mobile Device Media Queries */
+@media screen and (max-width:767px){
+    body{
+        padding: 0 20px;
+    }
 }
