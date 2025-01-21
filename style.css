@@ -239,6 +239,16 @@ nav{
 .box-3 .read-more-btn{
     color: #8700FF;
 }
+.navigation-container .arrow{
+    width: 60px;
+    height: 60px;
+    background-color: var(--color-orange);
+    border-radius: 100px;
+}
+.arrow .fa-solid{
+    font-size: 2rem;
+    color:var(--color-white);
+}
 
 /********************************* 
 Tab and Mobile Both media Queries
@@ -290,6 +300,9 @@ Tab and Mobile Both media Queries
     }
     .curriculum-box-container .box .box-text{
         margin-bottom: 2rem;
+    }
+    .navigation-container{
+        display: none;
     }
 }
 
