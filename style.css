@@ -190,7 +190,7 @@ nav{
     font-size: clamp(2.8rem, 3vw, 4.6rem);
     margin-bottom: 8rem;
 }
-.curriculum-box-container{
+.curriculum-box-container, .our-stories-grid-container{
     margin-bottom: 8rem;
 }
 .curriculum-box-container .box{
@@ -252,7 +252,25 @@ nav{
 }
 
 /* Our Stories Styles */
+#our-stories{
+    position: relative;
+}
+#our-stories::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(#f7f7f7 0%, #FEA301 100%);
+    z-index: -1;
+    opacity: 0.30;
+}
+.story-content{
+    text-align: center;
+}
 .our-stories-grid-container{
+    text-align: left;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
@@ -369,7 +387,7 @@ Tab and Mobile Both media Queries
     .std-curiclum-title, .story-title{
         margin-bottom: 2.5rem;
     }
-    .curriculum-box-container{
+    .curriculum-box-container, .our-stories-grid-container{
         margin-bottom: 3rem;
     }
     .curriculum-box-container .box .box-title{
@@ -424,7 +442,7 @@ Tab and Mobile Both media Queries
         margin-top: -2.1rem;
     }
     .card-text-container span{
-        font-size: clamp(1.2rem, 1vw, 1.6rem);
+        font-size: clamp(1rem, 2.5vw, 1.6rem);
         font-weight: 500;
         padding: 1rem 2rem;
         border-radius: 5rem;
