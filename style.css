@@ -12,21 +12,140 @@ html{
     padding: 0;
     box-sizing: border-box;
 }
+a{
+    text-decoration: none;
+}
 
 /* Global Color */
 :root{
-    --color-white: #F7F7F7;
+    --color-white: #ffffff;
     --color-sky-blue:#01ACFD;
     --color-orange:#FEA301;
     --color-black:#000000;
     --color-202020:#202020;
     --color-808080:#808080;
+    --color-F7F7F7: #f7f7f7;
+    --color-dark-black:#111111;
 }
 
 /* Base Styles */
 body{
     font-family: "Quicksand", serif;
     color: var(--color-black);
+    font-size: 1.6rem;
 }
 
 /* Global Styles */
+.boxed-container{
+    max-width:1160px;
+    margin: 0 auto;
+}
+.p-flex{
+    display: flex;
+}
+.flex-col{
+    flex-direction: column;
+}
+.flex-row-reversed{
+    flex-direction: row-reverse;
+}
+.flex-col-reversed{
+    flex-direction: column-reverse;
+}
+.flex-center-x{
+    justify-content: center;
+}
+.flex-center-y{
+    align-items: center;
+}
+.flex-center{
+    justify-content: center;
+    align-items: center;
+}
+.flex-gap-1{
+    gap: 1rem;
+}
+.flex-gap-2{
+    gap: 2rem;
+}
+.flex-gap-3{
+    gap: 3rem;
+}
+.text-center{
+    text-align: center;
+}
+.flex-between{
+    justify-content: space-between;
+}
+
+/* Utility classes */
+.btn-primary{
+    color: var(--color-white);
+    font-size: clamp(1.6rem, 2.5vw, 2rem);
+    font-weight: 600;
+    padding: 1.2rem 4.5rem;
+    background-color: var(--color-dark-black);
+    border: 1px solid var(--color-dark-black);
+    border-radius: 1rem;
+}
+
+/* Navbar Styles */
+nav{
+    padding: 2rem 0;
+}
+.logo{
+    width: 55px;
+}
+.logo-container .logo-text{
+    color: var(--color-dark-black);
+    font-size: clamp(2rem, 2.5vw, 3.2rem);
+}
+.menu-container .menu-item{
+    list-style: none;
+}
+.menu-container .menu-item::after{
+    content:"";
+    display: block;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    transition: all .3s ease-in-out;
+}
+.menu-container .menu-item:hover::after{
+    width: 100%;
+}
+.menu-container .menu-item:first-child::after{
+    background-color: var(--color-orange);
+}
+.menu-container .menu-item:nth-child(2)::after{
+    background-color: var(--color-sky-blue);
+}
+.menu-container .menu-item:nth-child(3):after{
+    background-color: #05D4DF;
+}
+.menu-container .menu-item:last-child:after{
+    background-color: #5D58EF;
+}
+.menu-item a{
+    font-size: clamp(1.6rem, 2.5vw, 2rem);
+    font-weight: 600;
+}
+.menu-item:first-child a{
+    color: var(--color-orange);
+}
+.menu-item:nth-child(2) a{
+    color: var(--color-sky-blue);
+}
+.menu-item:nth-child(3) a{
+    color: #05D4DF;
+}
+.menu-item:last-child a{
+    color: #5D58EF;
+}
+
+.nav-btn{
+    background-color: var(--color-orange);
+    border: 1px solid var(--color-orange);
+}
