@@ -33,6 +33,7 @@ body{
     font-family: "Quicksand", serif;
     color: var(--color-black);
     font-size: 1.6rem;
+    font-weight: 400;
 }
 
 /* Global Styles */
@@ -62,6 +63,9 @@ body{
     justify-content: center;
     align-items: center;
 }
+.flex-grow{
+    flex: 1;
+}
 .flex-gap-1{
     gap: 1rem;
 }
@@ -70,6 +74,9 @@ body{
 }
 .flex-gap-3{
     gap: 3rem;
+}
+.flex-gap-5{
+    gap: 5rem;
 }
 .text-center{
     text-align: center;
@@ -80,6 +87,7 @@ body{
 
 /* Utility classes */
 .btn-primary{
+    display: inline-block;
     color: var(--color-white);
     font-size: clamp(1.6rem, 2.5vw, 2rem);
     font-weight: 600;
@@ -147,14 +155,32 @@ nav{
 .menu-item:last-child a{
     color: #5D58EF;
 }
-
 .nav-btn{
     background-color: var(--color-orange);
     border: 1px solid var(--color-orange);
 }
 
+/* Hero Section Styles */
+.hero-title{
+    color: var(--color-dark-black);
+    font-size: clamp(3.4rem, 3.8vw, 5.6rem);
+    margin-bottom: 24px;
+}
+.hero-text{
+    color: var(--color-dark-black);
+    font-size: clamp(1.6rem, 2.5vw, 2rem);
+    line-height: 1.5;
+    margin-bottom: 24px;
+}
+.hero-img{
+    width: 100%;
+}
+
 /* Tab and Mobile Both media Queries*/
 @media screen and (max-width:1024px){
+    nav{
+        border-bottom:1px solid var(--color-orange);
+    }
     .menu-container{
         display: none;
     }
@@ -171,20 +197,21 @@ nav{
         display: inline-block;
         width: 25px;
         height: 3px;
+        border-radius: 10000px;
         background-color: var(--color-dark-black);
     }
 }
 
 /* Tablet Media Queries */
 @media screen and (min-width:768px) and (max-width:1024px){
-    body{
-        padding: 0 30px;
+    nav{
+        padding: 20px 30px;
     }
 }
 
 /* Mobile Device Media Queries */
 @media screen and (max-width:767px){
-    body{
-        padding: 0 20px;
+    nav{
+        padding: 20px;
     }
 }
