@@ -178,6 +178,14 @@ nav{
 
 /* Tab and Mobile Both media Queries*/
 @media screen and (max-width:1024px){
+    /* global styles */
+    .flex-col-reversed-tm{
+        flex-direction: column-reverse;
+    }
+    .text-center-tm{
+        text-align: center;
+    }
+
     nav{
         border-bottom:1px solid var(--color-orange);
     }
@@ -200,6 +208,9 @@ nav{
         border-radius: 10000px;
         background-color: var(--color-dark-black);
     }
+
+    /* Hero section */
+    
 }
 
 /* Tablet Media Queries */
@@ -207,11 +218,20 @@ nav{
     nav{
         padding: 20px 30px;
     }
+    /* Hero Section */
+    #hero-section{
+        padding: 30px;
+    }
 }
 
 /* Mobile Device Media Queries */
 @media screen and (max-width:767px){
     nav{
+        padding: 20px;
+    }
+
+    /* Hero Section */
+    #hero-section{
         padding: 20px;
     }
 }
